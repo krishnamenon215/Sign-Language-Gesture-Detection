@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Sign Language Detection</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<p><h1 align="center">Sign Language Detection</h1></p>
+<div class="container">
+<div class="row">
+    <h2>Select an image to upload</h2>
+    <div style="text-align:center">
+    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+    <header>Upload image</header>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <form method='POST' enctype='multipart/form-data'>
+    {{form.hidden_tag()}}
+    {{form.file()}}
+    {{form.submit()}}
+        <p>&nbsp;</p>
+    </form>
+</div>
+<h2>Predicted Result</h2>
+<div>
+{{result}}
+</div>
+</div>
+</body>
+</html>	
